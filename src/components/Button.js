@@ -1,10 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+ const Button = (props) => {
+     let buttonStyles = "";
+     if(props.float === true){
+        buttonStyles += " btn-floating";
+     }
+     if(props.size) buttonStyles += ` btn-${props.size}`;
+     if(props.waveEffect) buttonStyles += " waves-effect";
+     if(props.waveColor) buttonStyles += ` waves-${props.waveColor}`;
+     if(props.color) buttonStyles += ` ${props.color}`;
 
- const text = (msg) => {
+     
+
+     console.log(buttonStyles);
     return (
-        <h1>{msg}</h1>
+
+    <button className={buttonStyles}>{props.children}</button>
+    
     );
+
+};
+
+Button.propTypes = {
+    buttonStyles: PropTypes.string,
+    float : PropTypes.bool,
+    size : PropTypes.string,
+    waveEffect : PropTypes.bool,
+    waveColor : PropTypes.string,
+    color: PropTypes.string,
+
+    // children: PropTypes.oneOfType([])
 }
 
-export default text;
+export default Button;
