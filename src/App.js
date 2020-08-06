@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <Mathy num1={1} operator = {"multiply"} num2={2}></Mathy>
+      <Mathy num1={1} operator = {"multiply"} num2={6}></Mathy>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./Mathy.css";
 
 const Mathy = (props) => {
     let result;
@@ -25,8 +26,10 @@ const Mathy = (props) => {
             break;
     }
     
+
+    
     return(
-        <h1>{result}</h1>    
+        <h1 className={ result > 5 ? "redColor": "normalColor"}>{result}</h1>    
     );
 };
 
